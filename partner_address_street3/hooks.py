@@ -1,9 +1,9 @@
-# Copyright 2016 Sodexis
+# Copyright 2016-2020 Sodexis
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 
 def post_init_hook(cr, registry):
-    """ Add street3 to address format """
+    """Add street3 to address format"""
     query = """
         UPDATE res_country
         SET address_format = replace(
@@ -16,7 +16,7 @@ def post_init_hook(cr, registry):
 
 
 def uninstall_hook(cr, registry):
-    """ Remove street3 from address format """
+    """Remove street3 from address format"""
     # Remove %(street3)s\n from address_format
     query = """
         UPDATE res_country

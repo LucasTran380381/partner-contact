@@ -1,4 +1,4 @@
-# © 2014-2016 Camptocamp SA
+# Copyright 2014-2020 Camptocamp SA
 # @author: Nicolas Bessi
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
@@ -7,7 +7,8 @@ from odoo import fields, models
 
 class ResCountry(models.Model):
     """Override default adresses formatting of countries"""
-    _inherit = 'res.country'
+
+    _inherit = "res.country"
 
     address_format = fields.Text(
         default=(
